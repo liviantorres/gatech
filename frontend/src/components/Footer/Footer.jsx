@@ -1,10 +1,10 @@
 // src/components/Footer.jsx
 import React from 'react';
 import './Footer.css';
-import logo from '../assets/logo-branco.png';
-import emailIcon from '../assets/email.png';
-import instagramIcon from '../assets/instagram.png';
-import linkedinIcon from '../assets/linkedin.png';
+import logo from '../../assets/logo-branco.png';
+import emailIcon from '../../assets/email.png';
+import instagramIcon from '../../assets/instagram.png';
+import linkedinIcon from '../../assets/linkedin.png';
 
 const Footer = () => {
   return (
