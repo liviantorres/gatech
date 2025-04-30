@@ -1,0 +1,85 @@
+.footer {
+    background-color: #564A93;
+    color: white;
+    width: 100%;
+    padding: 1.2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 4rem;
+    text-align: left;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footer-section.redes-sociais {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 165px;
+}
+
+.texto {
+    font-size: 1.2rem;
+    font-weight: 400;
+}  
+
+.icon-email {
+    width: 30px;
+    height: 25px;
+}
+
+.contato-email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-sociais {
+    width: 50px;
+    height: 50px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-section {
+        align-items: center;
+    }
+
+    .footer-logo {
+        width: 140px;
+    }
+
+    .icon-sociais {
+        width: 50px;
+        height: 50px;
+    }
+
+    .email-texto {
+        font-size: 1rem;
+    }
+}
+  
