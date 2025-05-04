@@ -1,0 +1,188 @@
+
+/* ========== timeline ========== */
+.timeline-image-container {
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+}
+  
+.timeline-event-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.timeline-card {
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 180px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.timeline-card-content {
+    padding: 0.5rem 1rem 0 1rem;
+    flex-grow: 1;
+}
+
+/* titulo postagem */
+.timeline-card-content h3 {
+    margin: 2px 0 10px 10px;
+    font-size: 1.4rem;
+    margin-bottom: -8px;
+    color: var(--roxo-principal);
+}
+  
+.timeline-card-description {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px;
+    flex: 1;
+}
+  
+.timeline-card-footer {
+    background-color: var(--roxo-principal);
+    height: 17px;
+    width: 100%;
+    border-radius: 0 0 9px 9px;
+}
+
+/* ========== linha vertical ========== */
+.timeline-section {
+    position: relative;
+    padding: 2rem clamp(1rem, 5vw, 5rem);
+}
+
+.timeline-section::before {
+    content: '';
+    position: absolute;
+    top: 120px;
+    bottom: 170px;
+    left: calc(clamp(1rem, 5vw, 5rem) + -12px);
+    width: 4px;
+    background-color: var(--roxo-principal);
+    z-index: 0;
+}
+
+/* Ícones da timeline */
+.timeline-icon {
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+    width: 60px;
+    height:60px;
+    background-color: var(--roxo-principal);
+    border-radius: 50%;
+    padding: 8px;
+    object-fit: contain;
+    z-index: 2;
+}
+
+
+/* ========== responsividade ========== */
+@media (max-width: 1024px) {
+    .timeline-event-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .timeline-card {
+        min-height: 160px;
+        min-width: 80%;
+    }
+
+    .timeline-section::before {
+        left: calc(clamp(1rem, 5vw, 5rem) + -12px);
+    }
+
+    .timeline-card-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .timeline-card-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-icon {
+        display: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .timeline-event-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        background-color: white;
+    }
+
+    .timeline-card {
+        z-index: 1;
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .timeline-card-content h3 {
+        padding: 5px;
+    }
+
+    .timeline-card-content {
+        padding: 1rem 1rem 0 1rem;
+        flex-grow: 1;
+    }
+
+    .timeline-section::before {
+        top: 10;
+        bottom: -10;
+        left: 50%;
+    }
+
+    .timeline-card-description {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-card-description {
+        text-align: center;
+    }
+
+    .timeline-card-content {
+        padding: 1rem 0 0 0;
+        flex-grow: 1;
+    }
+
+    .timeline-section {
+        position: relative;
+        padding: 2rem clamp(1rem, 5vw, 5rem);
+    }
+}

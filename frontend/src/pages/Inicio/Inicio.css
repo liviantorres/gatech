@@ -1,0 +1,191 @@
+/* === Apresentação === */
+.grupo {
+  width: 100%;
+  height: 405.84px;
+  background-color: #e47ade;
+}
+
+.section-texto-gatech {
+  max-width: 700px;
+}
+
+.section-imagem img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 3.7em;
+  color: var(--roxo-principal);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* === Postagens === */
+.ultimas-postagens {
+  margin-bottom: 10px;
+}
+
+.ultimas-postagens::before {
+  display: none !important;
+}
+
+.titulo-postagens {
+  text-align: center;
+  color: var(--roxo-principal);
+  font-size: 2.2em;
+  margin-bottom: 40px;
+}
+
+.postagem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px auto;
+  max-width: 950px;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+}
+
+.imagem-container {
+  position: relative;
+}
+
+.imagem-evento {
+  width: 177px;
+  height: 177px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icone-postagem {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: var(--roxo-principal);
+  border-radius: 50%;
+  padding: 8px;
+  object-fit: contain;
+}
+
+.card-postagem {
+  flex: 1;
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 10px;
+  min-height: 177px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo-postagem {
+  flex-grow: 1;
+  padding: 1rem 0 0 1rem;
+}
+
+.conteudo-postagem h3 {
+  margin: 0 0 10px 0;
+  color: var(--roxo-principal);
+}
+
+.data-postagem {
+  font-size: 0.875rem;
+  color: gray;
+  margin: -2px 0 5px 0;
+}
+
+.descricao-postagem {
+  font-size: 1rem;
+  color: #333;
+  margin: 10px;
+  flex: 1;
+}
+
+.texto-e-botao {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.botao-ler-mais {
+  background-color: var(--roxo-principal);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-ler-mais:hover {
+  background-color: var(--roxo-escuro);
+  transform: scale(1.05);
+}
+
+.rodape-card {
+  background-color: var(--roxo-principal);
+  height: 15px;
+  width: 100%;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em;
+    margin: 0 0 2rem;
+  }
+
+  .section-imagem img {
+    margin-top: 5px;
+  }
+
+  .postagem {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .imagem-evento,
+  .icone-postagem {
+    display: none;
+  }
+
+  .texto-e-botao {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .grupo {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .grupo {
+    height: 150px;
+  }
+
+  .card-postagem {
+    width: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+.carousel-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+.carousel-slide {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10; /* Mantém proporção responsiva */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.02);
+}
+
+/* Customiza as setas */
+.slick-prev:before,
+.slick-next:before {
+  color: var(--roxo-principal);
+  font-size: 30px;
+}
+
+/* Remove margin/padding indesejado do Slick */
+.slick-slide {
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+}
+
+.slick-list {
+  overflow: hidden;
+  margin: 0 0.2rem; /* compensa o padding lateral das slides */
+}

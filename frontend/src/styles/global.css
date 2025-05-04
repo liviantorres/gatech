@@ -1,0 +1,98 @@
+/* ========== variáveis ========== */
+:root {
+    --roxo-principal: #564A93;
+    --roxo-escuro: #362274;
+    --rosa-claro: #FFE3F3;
+    --rosa-escuro: #DA7EB2;
+    --padding-base: 1rem 3rem 1rem 3rem;
+    --font-base: clamp(1.2rem, 1.5vw, 1.6rem);
+}
+
+/* ========== reset e base ========== */
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ========== títulos ========== */
+.titulo {
+    text-align: center;
+    color: var(--roxo-principal);
+    margin: -0.5rem 0 0.2rem;
+    font-size: 3rem;
+}
+
+/* ========== containers e seções ========== */
+.section-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: var(--padding-base);
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.section-texto-gatech,
+.text-block {
+    flex: 1 1 500px;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    padding: 0 var(--padding-base);
+}
+
+.section-texto-gatech p,
+.text-block p {
+    font-size: var(--font-base);
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.section-container h2, 
+.text-block h2 {
+    width: 100%;
+    text-align: center;
+    color: var(--roxo-principal);
+    margin-bottom: 0;
+    font-size: clamp(1.75rem, 5vw, 2.8rem);
+}
+
+/* ========== responsividade ========== */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .text-block,
+    .section-texto-gatech {
+        flex: 1 1 auto; /* ou até 100% se quiser garantir quebra de linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2rem;
+        margin-bottom: -70px;
+    }
+
+    .text-block,
+    .section-texto-gatech {
+        width: 100%;
+    }
+
+    .text-block p,
+    .section-texto-gatech p {
+        font-size: 1.2rem;
+    }
+}

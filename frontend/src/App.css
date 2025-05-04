@@ -12,3 +12,9 @@
   flex: 1;
 }
 
+/* Suaviza as fontes e scroll */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}

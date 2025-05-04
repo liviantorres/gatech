@@ -1,0 +1,61 @@
+/* ========== título / logo ========== */
+.section-container-titulo {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.imagem-logo-rosa {
+    margin-bottom: 5px;
+    max-width: 100px;
+}
+
+.section-imagem-logo img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+/* ========== conteiner de cards ========== */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 3rem 1rem 3rem 1rem; 
+}
+
+/* ========== responsividade ========== */
+@media (max-width: 1024px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-imagem-logo img {
+        margin-top: 20px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-imagem-logo img {
+       display: none;
+    }
+
+    .section-container-titulo h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-container > h2, .text-block h2 {
+        font-size: 1.5rem;
+    }
+
+    .cards-container {
+        padding: 3rem 0 3rem 0; 
+        gap: 3rem;
+    }
+}
